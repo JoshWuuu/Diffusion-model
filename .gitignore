@@ -1,0 +1,9 @@
+
+stanford_cars/.DS_Store
+*.jpg
+stanford_cars/devkit/cars_meta.mat
+*.mat
+*.m
+*.tgz
+*.txt
+*.pyc
