@@ -22,9 +22,9 @@ def train_fn(model, optimizer, epochs, dataloader, T):
     for epoch in range(epochs):
         for i, batch in enumerate(dataloader):
             t = torch.rand(0, T, (config.BATCH_SIZE,), device = config.DEVICE).long()
-            x_t = forward_diffusion_sample(batch, t, device=config.DEVICE)
-            x_t_hat = model(batch, t)
-            loss_ = F.l1_loss(x_t_hat, x_t)
+            x_t, noise = forward_diffusion_sample(batch, t, device=config.DEVICE)
+            noise_pred = model(x_t, t)
+            loss_ = F.l1_loss(noise, noise_pred)
 
             optimizer.zero_grad()
             loss_.backward()
