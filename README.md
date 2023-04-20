@@ -14,6 +14,13 @@ $$p_\theta(x_T) = N(x_t;0, I)$$
 $$q(x_{0:T}) = p(x_T)\prod_{t=1}^T p_\theta(x_{t-1}|x_{t})$$ 
 
 ## Result
+<figure>
+  <img 
+  src="diffusion_sample_img.png" 
+  alt="Results of sklearn models" 
+  width="1300" height="150">
+</figure>
+The leftmost image is the denoising images at timestamp 0. And the rightmost image is the denoising images at timestamp 1000.
 
 ## Reference
 https://github.com/lucidrains/denoising-diffusion-pytorch
