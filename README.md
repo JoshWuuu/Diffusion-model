@@ -1,6 +1,13 @@
 # Diffusion-model
 ## Introduction
 It is a side project in 2023. The project is a Computer Vision topic. The languages and relevent packages are **Python - Pytorch**. The project aims to generate image using diffusion model. 
+<figure>
+  <img 
+  src="diffusion_process.png" 
+  alt="Results of sklearn models" 
+  width="600" height="350">
+</figure>
+
 ## Data
 torchvision.datasets.StanfordCars, [link](http://ai.stanford.edu/~jkrause/cars/car_dataset.html). The cars dataset contain 16,185 images of 196 classes of cars. 
 ## Model
