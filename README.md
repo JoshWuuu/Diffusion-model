@@ -19,7 +19,7 @@ $$q(x_t|x_{t-1}) \sim \mathcal{N}(x_t;\sqrt{1-\beta_t}x_{t-1}, \beta_tI)$$
 $$X_t = \sqrt{\overline{\alpha_t}} X_{t-1} + \sqrt{1-\overline{\alpha_t}} \epsilon $$ 
 
 $$\epsilon \sim \mathcal{N}(0, 1)$$
-* Backward denoising process: A Unet, containing downward, upward and skip connection between two paths. The noise is generated with gaussian distribution, then is feed into Unet with timestamp of the noise to predict the noise within the images.
+* Backward denoising process: A Unet $\epsilon_{\theta}$, containing downward, upward and skip connection between two paths. The noise is generated with gaussian distribution, then is feed into Unet with timestamp of the noise to predict the noise within the images.
 $$p_\theta(x_T) = N(x_t;0, I)$$
 $$q(x_{0:T}) = p(x_T)\prod_{t=1}^T p_\theta(x_{t-1}|x_{t})$$ 
 $$x_{t-1} = \frac{1}{\sqrt{\alpha_t}}\Big(x_t - \frac{1-\alpha_t}{\sqrt{1-\overline{\alpha_t}}}\epsilon_\theta(x_t, t)\Big) + \sigma_t z$$
