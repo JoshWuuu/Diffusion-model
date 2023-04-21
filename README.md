@@ -1,12 +1,12 @@
 # Diffusion-model
 ## Introduction
 It is a side project in 2023. The project is a Computer Vision topic. The languages and relevent packages are **Python - Pytorch**. The project aims to generate image using diffusion model. 
-<figure>
+<p align="center">
   <img 
   src="diffusion_process.png" 
   alt="Results of sklearn models" 
   width="600" height="350">
-</figure>
+</p>
 
 ## Data
 torchvision.datasets.StanfordCars, [link](http://ai.stanford.edu/~jkrause/cars/car_dataset.html). The cars dataset contain 16,185 images of 196 classes of cars. 
@@ -24,6 +24,14 @@ $$p_\theta(x_T) = N(x_t;0, I)$$
 $$q(x_{0:T}) = p(x_T)\prod_{t=1}^T p_\theta(x_{t-1}|x_{t})$$ 
 $$x_{t-1} = \frac{1}{\sqrt{\alpha_t}}\Big(x_t - \frac{1-\alpha_t}{\sqrt{1-\overline{\alpha_t}}}\epsilon_\theta(x_t, t)\Big) + \sigma_t z$$
 $$x_t \sim \mathcal{N}(0, I), z \sim \mathcal{N}(0, I)$$
+
+<p align="center">
+  <img 
+  src="backward_flow.png" 
+  alt="Results of sklearn models" 
+  width="750" height="300"
+  align="center">
+</p>
 
 ## Result
 <figure>
